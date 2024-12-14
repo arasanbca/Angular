@@ -1,0 +1,22 @@
+<div class="container bg-primary">
+  <h1>{{name}}</h1>
+
+  <h1>{{data}}</h1>
+  <input type="text" [(ngModel)]="data"><br><br>
+
+  <button [attr.disabled]="a">CLICK1</button>
+  <button [attr.disabled]="b">CLICK2</button>
+  <button [attr.disabled]="c">CLICK3</button>
+  <button [disabled]="d">CLICK4</button>
+  <button [disabled]="e">CLICK5</button><br><br>
+
+
+  <button on-click="plus(); B=A" >INCREMENT</button>
+  <h1>{{A}}</h1>
+  <h1>{{B}}</h1>
+  <button (click)="minus(); B=A">DECREMENT</button><br><br>
+
+  <input type="text" (input)="ab($event);v2=$any($event.target).value">
+  <h1 style.color="{{cl}}">{{v1}}</h1>
+  <h1 style.color="{{cl1}}">{{v2}}</h1>
+</div>
